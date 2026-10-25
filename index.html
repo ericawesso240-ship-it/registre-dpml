@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e5a3a">
+<title>DPML – Registre national des délégués médicaux (démonstration)</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="flag"></div>
+<header class="top"><div class="wrap">
+<div class="brand"><small>République togolaise · Ministère de la Santé · Direction de la Pharmacie, du Médicament et des Laboratoires</small><h1>Registre national des délégués médicaux</h1></div>
+<nav class="tabs" aria-label="Navigation principale"><a href="#/verif" data-k="verif">Vérification</a><a href="#/delegue" data-k="delegue">Espace délégué</a><a href="#/admin" data-k="admin">Espace DPML</a></nav>
+</div></header>
+<main id="app" aria-live="polite"></main>
+<dialog id="dlg"><form id="nf" method="dialog">
+<h2 style="margin-bottom:12px">Nouveau délégué</h2>
+<div class="grid2">
+<div><label for="nom">Nom</label><input id="nom" name="nom" required></div>
+<div><label for="pre">Prénoms</label><input id="pre" name="pre" required></div>
+<div class="f"><label for="ent">Entreprise représentée</label><input id="ent" name="ent" list="ents" required></div>
+<div class="f"><label for="ph">Photo d’identité (facultatif)</label><input id="ph" name="ph" type="file" accept="image/*"></div>
+</div><datalist id="ents"></datalist>
+<p class="lede" style="margin:12px 0">Le dossier est créé « en attente » ; la carte devient utilisable après validation par la DPML.</p>
+<div class="bar"><button>Enregistrer le dossier</button><button type="button" class="ghost" data-close>Annuler</button></div>
+</form></dialog>
+<script src="assets/qrcode.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
